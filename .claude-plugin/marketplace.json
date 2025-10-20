@@ -1,0 +1,16 @@
+{
+  "name": "Yuda AI Skills",
+  "description": "Official Yuda.me skill collection for Claude AI workflows",
+  "author": "Yuda",
+  "version": "0.1.0",
+  "homepage": "https://ai.yuda.me",
+  "repository": "https://github.com/yudame/ai-skills",
+  "skills": [
+    {
+      "name": "creative-juices",
+      "path": "creative-juices",
+      "version": "0.1.0",
+      "description": "Break free from predictable AI responses with randomized creative prompts"
+    }
+  ]
+}
