@@ -1,5 +1,7 @@
 # Yuda AI Skills
 
+> **🧪 Experimental**: This repository is for testing Anthropic's new Skills feature. Our primary offering is the [Creative Juices MCP Server](https://github.com/tomcounsell/cuttlefish/tree/main/apps/ai/mcp) which works across multiple AI platforms.
+
 Official collection of Claude Skills from [Yuda.me](https://ai.yuda.me)
 
 ## What Are Skills?
