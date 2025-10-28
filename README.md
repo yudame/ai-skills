@@ -1,63 +1,101 @@
-# Yuda AI Skills
+# Yuda AI Skills & MCP Servers
 
-> **🧪 Experimental**: This repository is for testing Anthropic's new Skills feature. Our primary offering is the [Creative Juices MCP Server](https://github.com/tomcounsell/cuttlefish/tree/main/apps/ai/mcp) which works across multiple AI platforms.
+Documentation and resources for AI tools from [ai.yuda.me](https://ai.yuda.me)
 
-Official collection of Claude Skills from [Yuda.me](https://ai.yuda.me)
+## Creative Juices MCP Server
 
-## What Are Skills?
+**HTTP-hosted MCP server** for creative thinking and strategic validation. No installation, no API keys, just add a URL.
 
-Skills are reusable, file-based instructions that teach Claude specialized tasks. They're token-efficient (only ~30-50 tokens for discovery) and work across Claude.ai, API, and Claude Code.
+**Quick Start**: Add to your MCP client:
+```
+https://ai.yuda.me/mcp/creative-juices/serve
+```
+
+**Three Tools**:
+- `get_inspiration` - Gentle creative nudges with concrete metaphors
+- `think_outside_the_box` - Intense creative shocks for breakthrough thinking
+- `reality_check` - Strategic questions from Musk's frameworks
+
+**[→ Full Documentation](./creative-juices/README.md)** | **[→ Installation Guide](./creative-juices/INSTALLATION.md)**
+
+---
+
+## About This Repository
+
+This repository contains documentation for publicly available AI tools. Currently focused on the Creative Juices MCP server, with plans to add more tools in the future
+
+## Features
+
+- **No Setup**: HTTP-hosted, just add a URL to your MCP client config
+- **No API Keys**: Completely open, no authentication required
+- **No Tracking**: Zero data collection, complete privacy
+- **600+ Words**: Curated vocabulary spanning human history
+- **Proven Frameworks**: Strategic questions from Elon Musk's documented thinking methods
+- **Multi-Client**: Works with Claude Desktop, Claude Code, Cursor, Windsurf, and any MCP client
+
+## Why Creative Juices?
+
+LLMs and humans both fall into predictable patterns. Random concrete words force unexpected connections. Strategic questions pressure-test assumptions. Together, they help break free from habitual thinking.
+
+Read more in the [design philosophy](./creative-juices/README.md#design-philosophy).
 
 ## Installation
 
-### Quick Install
+**One-click**: Download [creative-juices.mcpb](https://ai.yuda.me/mcp/creative-juices/download.mcpb)
 
-```bash
-/plugin marketplace add yudame/ai-skills
-/plugin install creative-juices
+**Manual**: Add this to your MCP client config:
+```json
+{
+  "mcpServers": {
+    "creative-juices": {
+      "url": "https://ai.yuda.me/mcp/creative-juices/serve"
+    }
+  }
+}
 ```
 
-### Manual Install
+See [INSTALLATION.md](./creative-juices/INSTALLATION.md) for detailed instructions for each client.
 
-1. Clone this repository
-2. Copy the skill folder to `~/.claude/skills/`
-3. Restart Claude
+## Testing & Verification
 
-## Available Skills
+[![MCP Server Tests](https://github.com/yudame/ai-skills/actions/workflows/test-mcp-servers.yml/badge.svg)](https://github.com/yudame/ai-skills/actions/workflows/test-mcp-servers.yml)
 
-### Creative Juices
+**Open source tests prove our servers work as documented.**
 
-**Status:** ✅ Ready to use
+```bash
+# Run tests locally
+pip install -r tests/requirements.txt
+pytest tests/test_creative_juices.py -v
+```
 
-Break free from predictable AI responses with randomized creative prompts.
+- **Automated Testing**: GitHub Actions runs tests every 6 hours
+- **Production Validation**: Tests run against live servers
+- **Public Transparency**: All test code is open source
 
-**Use when:**
-- Need inspiration or fresh perspectives
-- Stuck on design/feature problems
-- Want to validate assumptions or reality-check ideas
+See [tests/README.md](./tests/README.md) for detailed testing documentation.
 
-**Three tools:**
-1. `get_inspiration` - Gentle creative nudges with everyday metaphors
-2. `think_outside_the_box` - Intense creative shocks with dramatic scenarios
-3. `reality_check` - Strategic validation using Elon Musk's frameworks
-
-[Full documentation →](./creative-juices/SKILL.md)
-
-## Development Status
-
-Creative Juices skill is complete and ready for use! The skill is based on the MCP server implementation at [cuttlefish/apps/ai/mcp/creative_juices_server.py](https://github.com/tomcounsell/cuttlefish/blob/main/apps/ai/mcp/creative_juices_server.py).
+**Note**: Tests currently show servers offline. See [FINDINGS.md](./FINDINGS.md) for status.
 
 ## Roadmap
 
-- [x] Repository structure
-- [x] Marketplace manifest
-- [x] Creative Juices skill with complete implementation
-- [x] Word list supporting files (1,100+ words)
-- [x] Framework reference documentation (24 questions)
-- [x] Comprehensive usage examples
-- [ ] Test installation and gather user feedback
-- [ ] Host marketplace.json at https://ai.yuda.me/skills/marketplace.json
-- [ ] Future skills: QuickBooks assistant, documentation helper, etc.
+### Completed
+- [x] Comprehensive documentation
+- [x] 600+ curated words across history
+- [x] Four strategic frameworks (24 questions)
+- [x] Multi-client installation guides
+- [x] Automated test suite
+- [x] CI/CD monitoring pipeline
+
+### In Progress
+- [ ] Deploy HTTP-hosted MCP server to production
+- [ ] Finalize server endpoint architecture
+- [ ] User feedback collection
+- [ ] Word list expansion (target: 1000+)
+
+### Future
+- [ ] QuickBooks MCP server documentation
+- [ ] Language support (Spanish, French, German)
+- [ ] Additional MCP tools and servers
 
 ## Contributing
 

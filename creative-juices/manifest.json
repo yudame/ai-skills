@@ -1,0 +1,95 @@
+{
+  "name": "creative-juices",
+  "version": "1.0.0",
+  "description": "MCP server that generates random creative prompts and strategic questions to help LLMs think outside the box",
+  "author": "Tom Counsell",
+  "homepage": "https://ai.yuda.me/mcp/creative-juices",
+  "repository": "https://github.com/yudame/ai-skills",
+  "documentation": "https://github.com/yudame/ai-skills/tree/main/creative-juices",
+
+  "tools": [
+    {
+      "name": "get_inspiration",
+      "description": "Generate 3 gentle verb-noun combinations for early-stage creative framing",
+      "parameters": {},
+      "returns": {
+        "sparks": "array of 3 verb-noun combinations",
+        "instruction": "guidance for applying the metaphors"
+      }
+    },
+    {
+      "name": "think_outside_the_box",
+      "description": "Generate 3 intense verb-noun combinations for breaking linear thinking",
+      "parameters": {},
+      "returns": {
+        "sparks": "array of 3 verb-noun combinations",
+        "instruction": "guidance for shattering assumptions"
+      }
+    },
+    {
+      "name": "reality_check",
+      "description": "Get strategic questions from Elon Musk's thinking frameworks for validation",
+      "parameters": {},
+      "returns": {
+        "questions": "array of 4 strategic questions",
+        "frameworks": "array of framework names",
+        "instruction": "guidance for strategic validation"
+      }
+    }
+  ],
+
+  "prompts": [],
+
+  "installation": {
+    "type": "http",
+    "url": "https://ai.yuda.me/mcp/creative-juices/serve",
+    "transport": "http",
+    "bundle_url": "https://ai.yuda.me/mcp/creative-juices/download.mcpb"
+  },
+
+  "features": [
+    "600+ curated words spanning human history",
+    "Zero external dependencies (uses stdlib random)",
+    "Completely private - no data collection",
+    "No authentication required",
+    "Four proven strategic thinking frameworks",
+    "Concrete words for stronger creative friction",
+    "HTTP-hosted - no local installation needed"
+  ],
+
+  "keywords": [
+    "mcp",
+    "creative-thinking",
+    "divergent-thinking",
+    "brainstorming",
+    "strategic-frameworks",
+    "metaphors",
+    "randomness",
+    "elon-musk",
+    "first-principles"
+  ],
+
+  "license": "MIT",
+
+  "privacy": {
+    "data_collection": false,
+    "external_apis": false,
+    "authentication_required": false
+  },
+
+  "categories": [
+    "creativity",
+    "productivity",
+    "thinking-tools"
+  ],
+
+  "compatibility": {
+    "clients": [
+      "claude-desktop",
+      "claude-code",
+      "cursor",
+      "windsurf"
+    ],
+    "transport_types": ["http"]
+  }
+}
