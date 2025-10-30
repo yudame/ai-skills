@@ -2,6 +2,8 @@
 
 Documentation and resources for AI tools from [ai.yuda.me](https://ai.yuda.me)
 
+**⚠️ MCPB Bundle Issue**: One-click installation currently has a version compatibility warning (requires Claude Desktop 1.0.0+, but latest is 0.14.x). Use manual installation for now. [See troubleshooting →](./TROUBLESHOOTING.md)
+
 ## Creative Juices MCP Server
 
 **HTTP-hosted MCP server** for creative thinking and strategic validation. No installation, no API keys, just add a URL.

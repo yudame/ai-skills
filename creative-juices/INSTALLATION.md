@@ -4,6 +4,8 @@ This guide covers installation for all MCP-compatible clients. The Creative Juic
 
 ## One-Click Installation (Recommended)
 
+**⚠️ Known Issue**: The MCPB bundle currently requires Claude Desktop 1.0.0+, but Claude Desktop is at version 0.14.x. This causes a version compatibility warning. A fix is in progress. Until then, use the **Manual Installation** method below.
+
 The easiest way to install Creative Juices is using the MCP Bundle format:
 
 1. **Download**: [creative-juices.mcpb](https://ai.yuda.me/mcp/creative-juices/download.mcpb)
@@ -14,6 +16,8 @@ The easiest way to install Creative Juices is using the MCP Bundle format:
    - Select the downloaded `creative-juices.mcpb` file
 3. **Restart Claude Desktop** (Cmd+Q then reopen, or Quit and restart)
 4. **Verify**: Look for 🔨 icon in the Claude input area
+
+**If you see version warnings**, use Manual Installation below instead.
 
 **How it works**: The bundle contains a lightweight Node.js proxy (~60 lines) that forwards requests to our hosted server at ai.yuda.me. You get zero-config installation with automatic server-side updates.
 
