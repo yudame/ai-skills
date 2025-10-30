@@ -1,19 +1,29 @@
 # Creative Juices MCP Server - Installation Guide
 
-This guide covers installation for all MCP-compatible clients. The Creative Juices server is hosted at `https://ai.yuda.me/mcp/creative-juices/serve` - you don't need to download or run anything locally.
+This guide covers installation for all MCP-compatible clients. The Creative Juices server is hosted at `https://ai.yuda.me/mcp/creative-juices/serve` - the processing happens on our servers, you just need a tiny proxy.
 
 ## One-Click Installation (Recommended)
 
 The easiest way to install Creative Juices is using the MCP Bundle format:
 
 1. **Download**: [creative-juices.mcpb](https://ai.yuda.me/mcp/creative-juices/download.mcpb)
-2. **Double-click** the downloaded file
-3. **Select your client** when prompted
-4. **Restart your client**
+2. **Install in Claude Desktop**:
+   - Open Claude Desktop
+   - Go to **Settings → Extensions** (or **Settings → Developer → Edit Config**)
+   - Click **"Install from file..."** (or drag-and-drop the .mcpb file)
+   - Select the downloaded `creative-juices.mcpb` file
+3. **Restart Claude Desktop** (Cmd+Q then reopen, or Quit and restart)
+4. **Verify**: Look for 🔨 icon in the Claude input area
+
+**How it works**: The bundle contains a lightweight Node.js proxy (~60 lines) that forwards requests to our hosted server at ai.yuda.me. You get zero-config installation with automatic server-side updates.
+
+**Bundle contents**:
+- `manifest.json` - MCP metadata
+- `client.js` - Node.js proxy (ships with Claude Desktop, no install needed)
 
 **Compatible with**:
-- Claude Desktop (macOS, Windows, Linux)
-- Any MCP client supporting .mcpb bundles
+- ✅ Claude Desktop (macOS, Windows, Linux)
+- ✅ Any MCP client supporting .mcpb bundles with Node.js runtime
 
 If the one-click installation doesn't work, or you're using a different client, use the manual installation instructions below.
 

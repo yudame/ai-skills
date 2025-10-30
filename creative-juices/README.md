@@ -212,18 +212,38 @@ The reality_check tool doesn't prescribe answers - it asks strategic questions t
 
 ## Technical Details
 
-**Language**: Python 3.11+
-**Protocol**: Model Context Protocol (MCP) over HTTP
-**Framework**: FastMCP
-**Hosting**: https://ai.yuda.me/mcp/creative-juices/serve
-**Dependencies**: None (uses Python stdlib `random`)
+### Server Architecture
+
+**Backend Server**:
+- **Language**: Python 3.11+
+- **Protocol**: Model Context Protocol (MCP) over HTTP
+- **Framework**: FastMCP + Django
+- **Hosting**: https://ai.yuda.me/mcp/creative-juices/serve
+- **Dependencies**: None (uses Python stdlib `random`)
+
+**Client Distribution** (.mcpb bundles):
+- **Type**: Node.js proxy (~60 lines)
+- **Function**: Forwards stdin → hosted server → stdout
+- **Runtime**: Node.js 16+ (ships with Claude Desktop)
+- **No local dependencies**: Everything runs through the proxy
+
+### Installation Options
+
+1. **MCPB Bundle** (Recommended): Download `.mcpb`, install in Claude Desktop → Node.js proxy connects to hosted server
+2. **Direct HTTP**: Add server URL to MCP client config → Client connects directly to hosted server
+3. **Manual Config**: Edit config JSON → Same as Direct HTTP but manual
+
+All three methods connect to the same hosted Django server.
+
+### Privacy & Security
+
 **Authentication**: None required
 **Data Collection**: None
-**Rate Limiting**: None (feel free to spam it)
+**Rate Limiting**: None (feel free to use freely)
 
-**Privacy**: All randomization happens server-side. The server receives no information about your conversation - tools take no parameters. Nothing is logged except basic health metrics.
+**Privacy**: All randomization happens server-side. The server receives no information about your conversation - tools take no parameters. Nothing is logged except basic health metrics (request count, response time).
 
-**Source Code**: Available in the [Cuttlefish project](https://github.com/yudame/cuttlefish/blob/main/apps/ai/mcp/creative_juices_server.py) (private repo, but code is visible).
+**Source Code**: Available in the [Cuttlefish project](https://github.com/yudame/cuttlefish/tree/main/apps/ai/mcp) for full transparency.
 
 ## Compatibility
 
