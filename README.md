@@ -22,9 +22,38 @@ https://ai.yuda.me/mcp/creative-juices/serve
 
 ---
 
+## Claude Code MCP Selector
+
+**Interactive shell function** for selectively loading MCP servers before launching Claude Code.
+
+**Quick Start**: Install and use:
+```bash
+cat ~/src/ai-skills/claude-code-mcp-selector/cc.zsh >> ~/.zshrc
+source ~/.zshrc
+cc
+```
+
+**Key Features**:
+- 📋 Interactive menu showing all available MCPs
+- 🎯 Load only what you need for each session
+- 🏢 User-level + project-level MCP configs
+- ⚡ Fast selection via numbers or shortcuts
+- 🔒 Control permission prompts (--dangerously-skip-permissions)
+
+**Why use it?**: Instead of loading all MCPs every time, pick exactly what you need. Faster launches, cleaner sessions, project-specific tooling.
+
+**[→ Full Documentation](./claude-code-mcp-selector/README.md)** | **[→ Installation Guide](./claude-code-mcp-selector/INSTALLATION.md)**
+
+---
+
 ## About This Repository
 
-This repository contains documentation for publicly available AI tools. Currently focused on the Creative Juices MCP server, with plans to add more tools in the future
+This repository contains documentation and utilities for AI tools:
+
+- **Creative Juices MCP Server**: HTTP-hosted MCP for creative thinking and strategic validation
+- **Claude Code MCP Selector**: Interactive shell function for managing MCP configurations
+
+More tools coming soon!
 
 ## Features
 

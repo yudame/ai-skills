@@ -1,0 +1,6 @@
+{
+  "render": {
+    "transport": "http",
+    "url": "https://mcp.render.com/mcp"
+  }
+}

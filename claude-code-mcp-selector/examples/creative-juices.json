@@ -1,0 +1,7 @@
+{
+  "creative-juices": {
+    "command": "npx",
+    "args": ["-y", "@anthropic/mcp-server-creative-juices"],
+    "env": {}
+  }
+}

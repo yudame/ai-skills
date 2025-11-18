@@ -1,0 +1,6 @@
+{
+  "context7": {
+    "transport": "sse",
+    "url": "https://mcp.context7.com/sse"
+  }
+}
